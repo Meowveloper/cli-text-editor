@@ -3,8 +3,9 @@ package main
 import (
 	"cli-text-editor/editor"
 	"fmt"
-	"github.com/manifoldco/promptui"
 	"os"
+
+	"github.com/manifoldco/promptui"
 )
 
 var ACTIONS = []string{
@@ -31,6 +32,10 @@ func main() {
 		switch result {
 		case ACTIONS[0]:
 			editor.Create_File()
+		case ACTIONS[1]:
+			editor.Edit_File()
+		case ACTIONS[2]:
+			editor.Delete_File()
 		case ACTIONS[3]:
 			return
 		}
